@@ -35,6 +35,7 @@ export class BoardsService {
     }
     
     deleteBoard(id: string): void { // return값 없음
+        const found = this.getBoardById(id); // board id 값 없을 시 getboardbyid의 error
         this.boards = this.boards.filter((board) => board.id !== id);
     }
 
