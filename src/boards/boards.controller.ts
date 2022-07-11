@@ -22,7 +22,7 @@ export class BoardsController {
 
     @Get('/:id')
     getBoardById(@Param('id') id: string): Board {
-        return this.getBoardById(id);
+        return this.boardsService.getBoardById(id);
     }
 
     @Delete('/:id')
