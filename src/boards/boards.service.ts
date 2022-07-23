@@ -42,7 +42,10 @@ export class BoardsService {
         await this.boardRepository.save(board);
 
         return board;
+    }
 
+    async getAllBoards(): Promise <Board[]> {
+        return this.boardRepository.find()
     }
 
 }
